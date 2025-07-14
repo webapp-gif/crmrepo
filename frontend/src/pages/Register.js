@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/AuthForm.css";
 
-function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
+function Register() {
+  const [form, setForm] = useState({ username: "", email: "", password: "" });
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Logged in as: ${form.email}`);
+    alert(`Registered:\nUsername: ${form.username}\nEmail: ${form.email}`);
   };
 
   return (
@@ -17,7 +17,15 @@ function Login() {
       <h1 className="auth-title">MutalFundsAdda</h1>
       <div className="auth-form-container">
         <form onSubmit={handleSubmit} className="auth-form">
-          <h2>Login to CRM</h2>
+          <h2>Register Account</h2>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            className="auth-input"
+            onChange={handleChange}
+            required
+          />
           <input
             type="email"
             name="email"
@@ -34,13 +42,9 @@ function Login() {
             onChange={handleChange}
             required
           />
-          <div className="auth-options">
-            <label><input type="checkbox" /> Remember Me</label>
-            <span className="forgot-link">Forgot Password?</span>
-          </div>
-          <button className="auth-button" type="submit">LOG IN</button>
+          <button className="auth-button" type="submit">REGISTER</button>
           <div className="auth-link">
-            Don’t have an account? <Link to="/register">Register</Link>
+            Already have an account? <Link to="/login">Login</Link>
           </div>
         </form>
       </div>
@@ -48,4 +52,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
