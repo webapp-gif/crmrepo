@@ -1,0 +1,15 @@
+// frontend
+
+1. Move the assets to the public - vivek / rahul
+2. Base architecture for the frontend application - aditya
+3. Add support for some styling library - vivek / rahul
+4. Refactor componet placements   (depends on task - 3)
+5. Redesign the base components  (depends on task - 3)
+6. Desing Reusable list View  (depends on task - 3)
+7. Desing Reusable Form View  (depends on task - 3)
+8. If possible a kanaban View  (depends on task - 3)
+
+
+// Backend
+
+CONNECT TO THE BACKEND - aditya
